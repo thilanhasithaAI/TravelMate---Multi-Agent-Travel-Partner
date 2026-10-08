@@ -53,8 +53,9 @@ if not OPENAI_API_KEY:
 # =========================
 
 llm = ChatOpenAI(
-    model="llama-3.3-70b-versatile",
-    api_key=OPENAI_API_KEY
+    model="gpt-4o-mini",
+    api_key=OPENAI_API_KEY,
+    temperature=0
 )
 
 # =========================
@@ -63,11 +64,11 @@ llm = ChatOpenAI(
 
 
 class TravelState(TypedDict):
-    messages = Annotated[list[AnyMessage],operator.add]
+    messages : Annotated[list[AnyMessage],operator.add]
     user_query:str
     flight_results:str
     hotel_results:str
-    itinery:str
+    itinerary:str
     llm_calls:int
 
 # Flight Agent
@@ -239,6 +240,15 @@ def run_travel_agent(user_input: str, thread_id: str | None = None):
     )
 
     final_answer = result["messages"][-1].content
+
+    # # Debug
+    # print("\nDEBUG RESULT KEYS:")
+    # print(result.keys())
+
+    # final_answer = ""
+
+    # if "messages" in result and result["messages"]:
+    #     final_answer = result["messages"][-1].content
 
     return {
         "thread_id": thread_id,
