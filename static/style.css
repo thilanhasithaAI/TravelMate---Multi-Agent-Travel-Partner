@@ -17,9 +17,13 @@ body {
     inset: 0;
     z-index: -1;
     background:
-        radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 32%),
+    /*  radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 32%),
         radial-gradient(circle at top right, rgba(168, 85, 247, 0.18), transparent 28%),
-        linear-gradient(135deg, #07111f 0%, #0f172a 45%, #111827 100%);
+        linear-gradient(135deg, #07111f 0%, #0f172a 45%, #111827 100%); */
+
+        radial-gradient(circle at top left, rgba(52, 211, 153, 0.18), transparent 32%),
+        radial-gradient(circle at top right, rgba(251, 191, 36, 0.18), transparent 28%),
+        linear-gradient(135deg, #0b1f17 0%, #12332a 45%, #1f2937 100%);
 }
 
 .gradient-circle {
@@ -188,7 +192,7 @@ textarea::placeholder {
     border: none;
     border-radius: 22px;
     padding: 0 24px;
-    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    background: linear-gradient(135deg, #581c87, #db2777);
     color: #ffffff;
     font-weight: 800;
     font-size: 1rem;
