@@ -1,4 +1,4 @@
-# TravelMate---Multi-Agent-Travel-Partner
+# TripPilot AI---Multi-Agent-Travel-Partner
 
 # How to run
 
@@ -28,7 +28,7 @@ pip install -r requirements.txt
 
 ```
 
-# ✈️ TripMate AI — A Multi-Agent Travel Planner with LangGraph
+# ✈️ TripPilot AI — A Multi-Agent Travel Planner with LangGraph
 
 An open-source AI travel planner that turns a natural-language trip request into a practical travel plan with flight suggestions, hotel ideas, and a day-by-day itinerary. The project uses a multi-agent workflow built with LangGraph, LangChain, and FastAPI.
 
@@ -103,7 +103,7 @@ DEFAULT_ORIGIN_IATA=DAC
 ## Installation
 
 ```bash
-python -m venv .venv
+python -m venv .travel
 source .venv/bin/activate   # On Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
